@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Sideways Scrolling Website</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="./VarelaRound-Regular.ttf">
+   </head>
+   <body>
+      <div class="scrolling-wrapper" id="boxx">
+         <div class="fill">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+         <button class="toggle-button " data-card="card1">Alzheimer's</button>
+         <div class="card we"id="card1">
+            <img src="old.png" id="old" ></img>
+            <img onclick="witchhead()" src="oldhead.png" alt="" id="head"/>
+            <img src="brain.png" onclick="progress('txt1', 'brain')" id="brain" hasProgressed="false"/>
+            <h2  class="we" id="title1"></h2>
+            <p class="we"id="txt1" stage="0"></p>
+         </div>
+         <div class="fill">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+         <button class="toggle-button" data-card="card2">Parkinson's</button>
+         <div class="card we"id="card2">
+            <img onclick="progress('txt2', 'img#2')"src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fnrneurol.2017.165/MediaObjects/41582_2018_Article_BFnrneurol2017165_Fig3_HTML.jpg" id="img#2" hasProgressed="false"></img>
+            <img src="palsy.jpeg" alt="" id="palsy" hasProgressed="false">
+            <h2 class="we" id="title2"></h2>
+            <p class="we" id="txt2"></p>
+         </div>
+         <div class="fill">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+         <button class="toggle-button" data-card="card3">Huntington's</button>
+         <div class="card we"id="card3">
+            <img onclick="progress('txt3', 'img3')"src="https://upload.wikimedia.org/wikipedia/commons/6/6b/George_Huntington.jpg" id="img3" hasProgressed="false"></img>
+            <h2 class="we" id="title3"></h2>
+            <p class="we" id="txt3" stage="0"></p>
+         </div>
+         <div class="fill">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+         <button class="toggle-button" data-card="card4">Challenges</button>
+         <div class="card we"id="card4">
+            <img onclick="progress('txt4', 'img4')"src="https://www.hopkinsmedicine.org/-/media/images/health/1_-conditions/brain/brain-anatomy-teaser.jpg" id="img4" hasProgressed="false"></img>
+            <h2 class="we" id="title4"></h2>
+            <p class="we" id="txt4" stage="0"></p>
+         </div>
+         <div class="fill">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+         <button class="toggle-button" data-card="card5">AI for Early Detection</button>
+         <div class="card we"id="card5">
+            <img onclick="progress('txt5', 'img5')"src="https://www.hopkinsmedicine.org/-/media/images/health/1_-conditions/brain/brain-anatomy-teaser.jpg" id="img5" hasProgressed="false"></img>
+            <h2 class="we" id="title5"></h2>
+            <p class="we" id="txt5" stage="0"></p>
+         </div>
+         <div class="fill">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+      <script src="newscript.js"></script>
+   </body>
+</html>
