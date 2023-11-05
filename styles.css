@@ -229,8 +229,8 @@ img .turn-black {
       left: 200px;
       top: 50px;
       transform: scale(0.4) }}
-    @keyframes fall {
-        0% {
+@keyframes fall {
+    0% {
             transform: rotate(0) scale(1.2);
         }
         100% {
