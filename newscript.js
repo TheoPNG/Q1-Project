@@ -210,9 +210,7 @@ function progress(id, ownId = "45") {
                 document.getElementById(ownId).setAttribute("hasProgressed", "true");
             }
         }
-    } else {
-        alert("patience");
-    }
+    } 
 }
 
 
@@ -733,7 +731,7 @@ const stageHandlers4 = {
     2: handleStage4_2,
     3: handleStage4_3,
     4: handleStage4_4,
-    5: handleStage4_5,
+
     
 
 };
