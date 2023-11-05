@@ -276,7 +276,7 @@ function handleStage2() {
     document.getElementById("1-1mag").remove();
     document.getElementById("brain").remove();
     const newIMG = document.getElementById("old")
-    newIMG.src = "normalbrain.jpeg"
+    newIMG.src = "./src/img/badbrain.jpeg"
     clearSlate('title1')
     newIMG.style.width = "400px"
     newIMG.style.height = "100%"
@@ -289,7 +289,7 @@ function handleStage3() {
     
     const newIMG = document.getElementById("old")
 
-    newIMG.src = "badbrain.jpeg"
+    newIMG.src = "./src/img/badbrain.jpeg"
     
     
     
@@ -312,7 +312,7 @@ function handleStage4() {
     
     const newIMG = document.getElementById("old")
     newIMG.style.width = "700px";
-    newIMG.src = "stageschart.jpg"
+    newIMG.src = "./src/img/stageschart.png"
     addText('title1', "Stages")
     
 
@@ -423,7 +423,7 @@ function magnify(id, newID) {
 
     const newImage = document.createElement("img");
     newImage.id = newID
-    newImage.src = "magnify.png";
+    newImage.src = "./src/img/magnify.png";
     newImage.style.width = elem.offsetWidth / 2 + "px";
     newImage.style.height = newImage.style.width
     newImage.style.zIndex = "10000";
@@ -506,7 +506,7 @@ function handleStage2_2() {
     clearSlate("title2")
     addText("title2", "History")
     document.getElementById("palsy").remove();
-    IMG2.src="palsy.jpeg";
+    IMG2.src="./src/img/palsy.jpeg";
     IMG2.style.height="60vh"
     IMG2.style.width="600px"
     IMG2.setAttribute("hasProgressed","false")
@@ -545,7 +545,7 @@ function handleStage2_4() {
 function handleStage2_5() {
     clearSlate("txt2")
     clearSlate("title2")
-    IMG2.src="doc.png";
+    IMG2.src="./src/img/doc.png";
     IMG2.style.height="100%"
     IMG2.style.width="300px"
     IMG2.setAttribute("hasProgressed", "false");
