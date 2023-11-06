@@ -1,3 +1,38 @@
+var images = []
+
+function preload() {
+    for (var i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+    }
+}
+
+//-- usage --//
+preload(
+    
+        "./src/img/badbrain.jpeg",
+        "./src/img/badbrain.jpeg",
+        "https://www.alzheimersblog.org/wp-content/uploads/2016/10/figure1.jpg",
+        "https://www.fairobserver.com/wp-content/uploads/2018/06/alt-right-incels-manosphere-extremism.png",
+        "https://media.wired.com/photos/5d3f7b1d6fd67f0009014cfa/1:1/w_1314,h_1314,c_limit/Science_PREP_645107548.jpg",
+        "https://www.healthyplace.com/sites/default/files/inline-images/Cholinesterase_Inhibitors.jpg",
+        "https://media.sciencephoto.com/image/c0511175/400wm",
+        "https://www.researchgate.net/publication/272080435/figure/fig1/AS:601754810982421@1520480935622/Fig-1-World-map-illustrating-the-global-distribution-of-deaths-caused-due-to.png",
+        "./src/img/magnify.png",
+        "./src/img/palsy.jpeg",
+        "https://upload.wikimedia.org/wikipedia/commons/6/6a/Jean-Martin_Charcot.jpg",
+        "https://lermagazine.com/wp-content/uploads/2022/01/shutterstock_1049278997.jpg",
+        "./src/img/doc.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/3%2C4-Dihydroxy-L-phenylalanin_%28Levodopa%29.svg/640px-3%2C4-Dihydroxy-L-phenylalanin_%28Levodopa%29.svg.png",
+        "https://www.thelancet.com/cms/asset/e5de4e9b-4cd3-41a9-9793-c67d08163987/gr1.jpg",
+        "https://www.researchgate.net/publication/305364205/figure/fig5/AS:384494776406018@1468682106324/George-Huntingtons-1872-paper-On-chorea-in-the-Medical-and-Surgical-Reporter-His.png",
+        "https://huntingtonstudygroup.org/wp-content/uploads/2015/08/hd-prevalence-map.png",
+        "https://www.mdpi.com/brainsci/brainsci-08-00177/article_deploy/html/images/brainsci-08-00177-g001.png",
+        "https://scx2.b-cdn.net/gfx/news/hires/2013/testingbrain.jpg",
+        "https://upload.medbullets.com/topic/113003/images/bbb%20-%20moises%20dominguez.jpg"
+    
+    
+)
 let imgCount = 0
 const sources =[
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7246147/",
