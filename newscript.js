@@ -260,7 +260,7 @@ function handleStages(mutations) {
 
 function handleStage1() {
     addText("title1", "History")
-    addText("txt1", "Alzheimer’s Disease(AD) was discovered by Dr. Alois Alzheimer on November 3, 1901, at an Asylum in Frankfurt.  He did an autopsy on Auguste Deter who had severe memory loss and behavioral change. This autopsy and research are the basis for all of our current knowledge on AD", function () {
+    addText("txt1", "Alzheimer’s Disease(AD) was discovered by Dr. Alois Alzheimer on November 3, 1901, in an Asylum in Frankfurt. He performed an autopsy on Auguste Deter who'd had severe memory loss and behavioral change. She was the first diagnosed case of AD. This autopsy and research are the basis for all of our current knowledge on AD.", function () {
         magnify("brain", "1-1mag");
         document.getElementById("1-1mag").setAttribute("hasProgressed", "false")
         document.getElementById("1-1mag").setAttribute('onclick', "let intervalId = setInterval(function () {progress('txt1','1-1mag')}, 2000);document.getElementById('1-1mag').style.animation = 'linear 2s zoom';")
@@ -310,13 +310,13 @@ function handleStage4() {
     
     const newIMG = document.getElementById("old")
     newIMG.style.width = "700px";
-    newIMG.src = "./src/img/stageschart.png"
+    newIMG.src = "https://www.alzheimersblog.org/wp-content/uploads/2016/10/figure1.jpg"
     addText('title1', "Stages")
     
 
     addText("txt1", "We recognize AD in 3 main stages: Preclinical AD, Mild Cognitive Impairment(MCI), and Alzheimer’s Dementia. We currently use imaging tests such as amyloid PET and MRI to help determine a patient’s stage. Additionally, the application of cerebrospinal fluid(CSF) is becoming more helpful for diagnosis", function () {
         
-        newIMG.setAttribute('onclick', "let intervalId = setTimeout(function () {progress('txt1','old')}, 2000);document.getElementById('old').style.animation = 'linear 2s shrink';")
+        newIMG.setAttribute('onclick', "let intervalId = setTimeout(function () {progress('txt1','old')});")
         newIMG.setAttribute("hasProgressed", "false")
     }, )
 }
@@ -508,7 +508,7 @@ function handleStage2_2() {
     IMG2.style.height="60vh"
     IMG2.style.width="600px"
     IMG2.setAttribute("hasProgressed","false")
-    IMG2.setAttribute('onclick', "addText('txt2', 'PD can be traced to an entire century before AD was discovered. It was first medically described by James Parkinson in 1817 but cases of it have been found in texts up to 3000 years ago in India. Dr. Parkinson wrote “An Essay on the Shaking Palsy” in which he described 6 cases of PD from his own practice.', function(){ IMG2.setAttribute('onclick', 'progress(\\'txt2\\',\\'img#2\\')'); })");
+    IMG2.setAttribute('onclick', "addText('txt2', 'PD can be traced to an entire century before AD was discovered. It was first medically described by James Parkinson in 1817 but cases of it have been found in texts up to 3,000 years ago in India. Dr. Parkinson wrote “An Essay on the Shaking Palsy” in which he described 6 cases of PD from his own practice.', function(){ IMG2.setAttribute('onclick', 'progress(\\'txt2\\',\\'img#2\\')'); })");
 
     
     
@@ -759,7 +759,7 @@ function handleStages4(mutations) {
 const IMG4 = document.getElementById("img4")
 function handleStage4_1() {
     addText("title4", "Challenges")
-    addText('txt4', 'Currently, treatment options for neurodegenerative disease are pretty sparse due to a few difficulties', function(){      
+    addText('txt4', 'Currently, treatment options for neurodegenerative disease are pretty sparse due to a few difficulties.', function(){      
         IMG4.setAttribute("onclick", "progress('txt4','img4')")
         IMG4.setAttribute("hasProgressed", "false")
     })
@@ -768,7 +768,7 @@ function handleStage4_1() {
 function handleStage4_2() {
     IMG4.style= "height: 100%"
     IMG4.style.width="1000px"
-    run("Diversity of Conditions", "One main reason it’s hard to treat neurodegenerative disease is because each condition has its own cause and affects a different area of the brain. We have a lack of knowledge of each individual section’s neurological pathology and treatment for one usually will have no effect on othes.","https://www.mdpi.com/brainsci/brainsci-08-00177/article_deploy/html/images/brainsci-08-00177-g001.png",4)
+    run("Diversity of Conditions", "One main reason it’s hard to treat neurodegenerative disease is because each condition has its own cause and affects a different area of the brain. We have a lack of knowledge of each individual section’s neurological pathology and treatment for one usually will have no effect on others.","https://www.mdpi.com/brainsci/brainsci-08-00177/article_deploy/html/images/brainsci-08-00177-g001.png",4)
 }
 function handleStage4_3() {
     IMG4.style.width="400px"
