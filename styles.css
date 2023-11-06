@@ -14,6 +14,20 @@ p{
   cursor: default;
   
 }
+#sp{
+  background-color: black;
+  color: white;
+  border: white;
+}
+#sp p{
+  color: black !important;
+}
+#title8{
+  color: black!important;
+}
+#card8{
+  background-color: white;
+}
 h2{
   cursor: default;
   font-size: x-large;
@@ -246,4 +260,7 @@ img .turn-black {
         100%{
           transform: scale(20);
         }
+      }
+      #txt8{
+        color: black!important;
       }

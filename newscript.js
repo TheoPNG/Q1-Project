@@ -9,6 +9,7 @@ function preload() {
 
 //-- usage --//
 preload(
+    "https://files.oaiusercontent.com/file-uAiwzVEMp82aqzbfTt6szHgr?se=2023-11-06T07%3A37%3A20Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D3faffbff-71ef-4c03-bd7e-76c51e08f3e5.webp&sig=be5r0g%2BlYslkBQzc3ySufThAPcX%2BrCv5R71RLOg7J0A%3D",
     "https://files.oaiusercontent.com/file-kaIpGecOHGfhrCurSnsgSF2t?se=2023-11-06T07%3A12%3A08Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D0faaf56d-d250-4a3d-9286-3192ea3edc4c.webp&sig=mJJS9KHVaU9pgnAU0p8o%2BV1NKlNXbAKrLUkyZBc794w%3D",
     "https://files.oaiusercontent.com/file-IYrqdP5mkfjkP2Bklp68eNVx?se=2023-11-06T06%3A56%3A46Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D35a7febb-03d1-4b4b-b5fc-b1a5fc51b10f.webp&sig=6u8Cj2WmWeFxL95gDadhhxnAOrg4qxExZEIaC/VsDfk%3D",
     "https://files.oaiusercontent.com/file-YU6PO1fgjrvBAiKXwWGZkhQG?se=2023-11-06T06%3A22%3A23Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dc706f2c3-cc35-4b73-8ff7-a6b986a0dcee.webp&sig=2fnNr1zaEJnSR%2BQobV/wzWEU/vrvFRwMmKyGjZsIaHU%3D",
@@ -49,6 +50,7 @@ preload(
 )
 let imgCount = 0
 const sources =[
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6526279/",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7246147/",
     "https://www.mayoclinic.org/diseases-conditions/alzheimers-disease/diagnosis-treatment/drc-20350453",
     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3234454/",
@@ -491,19 +493,26 @@ function magnify(id, newID) {
     document.getElementById("boxx").appendChild(newImage);
 }
 
-function addText(id, txt, callback) {
+function addText(id, txt, callback, go=true) {
     if (document.getElementById(id).innerHTML === "") {
         const element = document.getElementById(id);
         let i = 0;
         let intervalId = setInterval(function () {
             if (i < txt.length) {
+                if(go){
                 element.innerHTML += '<span class="character">' + txt[i] + '</span>';
+                }
+                else{
+                    element.innerHTML+=txt[i];
+                }
                 i++;
             } else {
                 clearInterval(intervalId);
                 
                 // Wrap characters in spans after the text has been added
+                if(go){
                 wrapCharsInSpans(id);
+                }
                 
 
                 if (callback) callback(); // Execute the callback if it exists
@@ -1041,4 +1050,11 @@ function handleStage7_5() {
     IMG6.style.width="500px"
     run("Significance", "As I previously mentioned, early detection is the key to proper treatment. Through integration of these biomarkers throughout people\\'s daily lives each person could have a unique profile with certain things they may be at risk for.", "https://files.oaiusercontent.com/file-kaIpGecOHGfhrCurSnsgSF2t?se=2023-11-06T07%3A12%3A08Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D0faaf56d-d250-4a3d-9286-3192ea3edc4c.webp&sig=mJJS9KHVaU9pgnAU0p8o%2BV1NKlNXbAKrLUkyZBc794w%3D", 7);
     
+}
+
+
+
+function conclude() {
+    addText("title8", "Conclusion", function(){}, false)
+    addText('txt8', "Technology will be the breakthrough point that allows us to cure these incurable diseases. It opens doors we didn\'t know existed. If these networks are supplied enough data and trained properly many people lives will be improved. I just mentioned the topic of neuroscience here but these tools will change how we approach disease as a whole.",function(){},false)
 }
