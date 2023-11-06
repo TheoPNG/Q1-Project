@@ -12,7 +12,6 @@ img{
 }
 p{
   cursor: default;
-  
 }
 #sp{
   background-color: black;
@@ -37,44 +36,38 @@ p{
 }
 .character {
   transition: color 0.2s;
-  opacity: 0.5;  /* Default opacity */
+  opacity: 0.5;
+ /* Default opacity */
 }
-
 .character:hover {
-opacity: 1;
+  opacity: 1;
 }
 .character.nearby {
-opacity: 1;
+  opacity: 1;
 }
-
-
 /* Base Styles */
 body, html {
   margin: 0;
   padding: 0;
   color: var(--text-color);
 }
-
 h1, h2, p {
   color: var(--text-color);
-
 }
 @font-face {
   font-family: VarelaRound;
   src: url(./src/font/VarelaRound-Regular.ttf);
 }
 h1, h2, p:hover {
-text-decoration: wavy white;
-font-family: VarelaRound;
+  text-decoration: wavy white;
+  font-family: VarelaRound;
 }
-
 html {
   display: flex;
   overflow: hidden;
   align-items: center;
   font-family: VarelaRound;
 }
-
 /* Scrolling Wrapper */
 .scrolling-wrapper {
   overflow: hidden;
@@ -86,7 +79,6 @@ html {
   z-index: 0;
   gap: 0;
 }
-
 /* Toggle Button */
 .toggle-button, .toggle-button:hover, .toggle-button.clicked {
   font-size: 50px;
@@ -101,31 +93,27 @@ html {
   flex-shrink: 0;
   position: relative;
 }
-
 .toggle-button:hover, .toggle-button.clicked {
   border: 4px dashed var(--button-border-color);
   background-color: var(--button-hover-bg-color);
 }
-
 /* Animations */
 @keyframes buttonmove {
   from {
       transform: rotate(0) scale(1);
       background-color: var(--button-hover-bg-color);
       border-width: 4px;
-  }
+ }
   to {
       transform: rotate(180deg) scale(1.5);
-     
       border-width: 10px;
-  }
+ }
 }
 /* Fill */
 .fill {
   white-space: nowrap;
   font-size: 30px;
 }
-
 /* Card */
 .card {
   color: black;
@@ -139,20 +127,17 @@ html {
   justify-content: space-around;
   border-radius: 10px;
 }
-
 .card img {
   width: 500px;
   height: 500px;
   object-fit: cover;
   border-radius: 10px;
 }
-
 /* Shapes */
 #shapesContainer {
   z-index: -1;
   width: 100%;
 }
-
 .random-shape {
   position: absolute;
   border-style: solid;
@@ -162,7 +147,6 @@ html {
   border-color: white !important;
   opacity: 0.6;
 }
-
 .square {
   width: 30px;
   height: 30px;
@@ -171,7 +155,6 @@ html {
   background-color: transparent;
   transform: rotate(var(--initial-rotation));
 }
-
 .circle {
   border-radius: 50%;
   border: 5px solid;
@@ -179,7 +162,6 @@ html {
   height: 50px;
   border-color: transparent;
 }
-
 /* Button */
 button {
   display: flex;
@@ -187,24 +169,19 @@ button {
   justify-content: center;
   color: black;
 }
-
 button:hover {
   color: white;
 }
-
 /* Miscellaneous */
 .turn-black {
-
   background-color:black !important;
   color: black !important;
   border: 0;
 }
-
 img .turn-black {
   width: 0px;
   height: 0px;
 }
-
 #head {
   position: absolute;
   border: 0;
@@ -213,11 +190,9 @@ img .turn-black {
   transform: scale(1.2);
   z-index: 11;
 }
-
 #old {
   z-index: 10;
 }
-
 #brain {
   position: absolute;
   left: 0px;
@@ -245,22 +220,24 @@ img .turn-black {
       opacity: 1;
       left: 200px;
       top: 50px;
-      transform: scale(0.4) rotate(15deg)}}
+      transform: scale(0.4) rotate(15deg)
+ }
+}
 @keyframes fall {
-    0% {
-            transform: rotate(0) scale(1.2);
-        }
-        100% {
-            transform: rotate(90deg) scale(0.8);
-            top: 1000px;
-            opacity: 0;
-        }
-      }
-      @keyframes zoom{
-        100%{
-          transform: scale(20);
-        }
-      }
-      #txt8{
-        color: black!important;
-      }
+  0% {
+      transform: rotate(0) scale(1.2);
+ }
+  100% {
+      transform: rotate(90deg) scale(0.8);
+      top: 1000px;
+      opacity: 0;
+ }
+}
+@keyframes zoom{
+  100%{
+      transform: scale(20);
+ }
+}
+#txt8{
+  color: black!important;
+}
