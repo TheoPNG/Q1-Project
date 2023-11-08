@@ -495,7 +495,7 @@ function handleStage8() {
 
 
 	addText('title1', "Stats on AD")
-	addText("txt1", "There are an estimated 6.7 million people with Alzheimer’s in the US alone. It accounts for around 2 million worldwide deaths every year. Revolutionary scientific advances are working to change this, we’ll get to that in a bit. (This means you can move to the next module, scroll)", function() {
+	addText("txt1", "There are an estimated 6.7 million people with Alzheimer’s in the US alone. It accounts for around 2 million worldwide deaths every year. Revolutionary scientific advances are working to change this, we’ll get to that in a bit. MODULE END(This means you can move to the next module, scroll)", function() {
 
 	}, )
 }
@@ -675,7 +675,7 @@ function handleStage2_7() {
 	IMG2.style.width = "850px"
 	IMG2.setAttribute("hasProgressed", "false");
 	addText("title2", "Statistics")
-	IMG2.setAttribute('onclick', "addText('txt2', 'PD affects over 10 million people across the globe. Men are 1.5x more likely to get it.', function(){ IMG2.setAttribute('onclick', 'progress(\\'txt2\\',\\'img#2\\')'); })");
+	IMG2.setAttribute('onclick', "addText('txt2', 'PD affects over 10 million people across the globe. Men are 1.5x more likely to get it. MODULE END', function(){ IMG2.setAttribute('onclick', 'progress(\\'txt2\\',\\'img#2\\')'); })");
 }
 
 
@@ -816,7 +816,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function handleStage3_5() {
 	IMG3.style.width = "700px";
 	const number = 3;
-	const newText = "Although Huntington's is less common than PD or AD, it's still seen across the world and affects hundreds of thousands of people.";
+	const newText = "Although Huntington's is less common than PD or AD, it's still seen across the world and affects hundreds of thousands of people. MODULE END";
 	const newIMG = "https://huntingtonstudygroup.org/wp-content/uploads/2015/08/hd-prevalence-map.png";
 
 	clearSlate("txt" + number);
@@ -886,7 +886,7 @@ function handleStage4_3() {
 }
 
 function handleStage4_4() {
-	run("Blood Brain Barrier", "The Blood Brain Barrier (BBB) regulates substances going from blood into the brain. It prevents 99% of foreign substances from entering the brain but it can raise a significant challenge in engineering therapies that can go past it to treat disease.", "https://upload.medbullets.com/topic/113003/images/bbb%20-%20moises%20dominguez.jpg", 4)
+	run("Blood Brain Barrier", "The Blood Brain Barrier (BBB) regulates substances going from blood into the brain. It prevents 99% of foreign substances from entering the brain but it can raise a significant challenge in engineering therapies that can go past it to treat disease. MODULE END", "https://upload.medbullets.com/topic/113003/images/bbb%20-%20moises%20dominguez.jpg", 4)
 
 }
 
@@ -956,7 +956,7 @@ function handleStage5_4() {
 }
 
 function handleStage5_5() {
-	run("Why it matters", "As previously mentioned, early detection is the key to getting proper treatment. If we can figure out what’s going on at the early stages or even predict it many lives will be saved. ", "./src/img/brain0.png", 5)
+	run("Why it matters", "As previously mentioned, early detection is the key to getting proper treatment. If we can figure out what’s going on at the early stages or even predict it many lives will be saved. MODULE END", "./src/img/brain0.png", 5)
 
 }
 
@@ -1038,7 +1038,7 @@ function handleStage6_6() {
 }
 
 function handleStage6_7() {
-	run("Why it matters", "In the future as this technology improves it’ll become more realistic to the function of a brain and can help us get better insights into treatment options and potential cures for these conditions.", "./src/img/brain6.png", 6)
+	run("Why it matters", "In the future as this technology improves it’ll become more realistic to the function of a brain and can help us get better insights into treatment options and potential cures for these conditions. MODULE END", "./src/img/brain6.png", 6)
 
 }
 
@@ -1113,7 +1113,7 @@ function handleStage7_4() {
 
 function handleStage7_5() {
 	IMG6.style.width = "500px"
-	run("Significance", "As I previously mentioned, early detection is the key to proper treatment. Through integration of these biomarkers throughout people\\'s daily lives each person could have a unique profile with certain things they may be at risk for.", "./src/img/brain10.webp", 7);
+	run("Significance", "As I previously mentioned, early detection is the key to proper treatment. Through integration of these biomarkers throughout people\\'s daily lives each person could have a unique profile with certain things they may be at risk for. MODULE END", "./src/img/brain10.webp", 7);
 
 }
 
@@ -1125,7 +1125,7 @@ function conclude() {
 }
 function intro() {
 	addText("title0", "Introduction", function() {}, false)
-	addText('txt0', "In this presentation we'll be covering neurodegenerative disease and how computational neuroscience can assist in research and treatment. Navigation is simple, just scroll down like you would on any other site. Each module is labeled and you just need to click on the images to progress through them. Also my works cited is the shapes in the background.(Scroll to the first module)", function() {}, false)
+	addText('txt0', "In this presentation we'll be covering neurodegenerative disease and how computational neuroscience can assist in research and treatment. Navigation is simple, just scroll down like you would on any other site. Each module is labeled and you just need to click on the images to progress through them. Keep clicking on the images or new content until you see END MODULE;that means you can scroll to the next one. Also my works cited is the shapes in the background.(Scroll to the first module)", function() {}, false)
 }
 // Add this to your newscript.js
 
