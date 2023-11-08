@@ -1121,7 +1121,7 @@ function handleStage7_5() {
 
 function conclude() {
 	addText("title8", "Conclusion", function() {}, false)
-	addText('txt8', "Early detection technology is the key to treatment of these diseases. It opens doors we didn\'t know existed. If these networks are supplied enough data and trained properly many people lives will be improved. Similar mechanisms may one day help us learn about and even cure these incurable diseases. I just mentioned the topic of neuroscience here but these tools will change how we approach disease as a whole.", function() {}, false)
+	addText('txt8', "Early detection technology is the key to treatment of these diseases. It opens doors we didn\'t know existed. If these networks are supplied enough data and trained properly many people lives will be improved. Similar mechanisms may one day help us learn about and even cure these incurable diseases. I just mentioned the topic of neuroscience here but these tools will change how we approach disease as a whole. You can view my github to see the code and a bit more info at github.com/TheoPNG/Q1-Project", function() {}, false)
 }
 function intro() {
 	addText("title0", "Introduction", function() {}, false)
