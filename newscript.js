@@ -1125,7 +1125,7 @@ function conclude() {
 }
 function intro() {
 	addText("title0", "Introduction", function() {}, false)
-	addText('txt0', "In this presentation we'll be covering neurodegenerative disease and how computational neuroscience can assist in research and treatment. Navigation is simple, just scroll down like you would on any other site. Each module is labeled and you just need to click on the images to progress through them. Keep clicking on the images or new content until you see END MODULE;that means you can scroll to the next one. Also my works cited is the shapes in the background.(Scroll to the first module)", function() {}, false)
+	addText('txt0', "In this presentation we'll be covering neurodegenerative disease and how computational neuroscience can assist in research and treatment. Navigation is simple, just scroll down like you would on any other site. Each module is labeled and you just need to click on the images to progress through them. Keep clicking on the images or new content until you see END MODULE; that means you can scroll to the next one. Also my works cited is the shapes in the background.(Scroll to the first module)", function() {}, false)
 }
 // Add this to your newscript.js
 
