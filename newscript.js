@@ -9,6 +9,8 @@ function preload() {
 
 //-- usage --//
 preload(
+	"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Tetrabenazine.svg/1200px-Tetrabenazine.svg.png",
+"https://www.thebridgeclinic.com/www-assets/blog-post/2018/04/Huntingtons%20Disease-01.jpg",
 	"https://files.oaiusercontent.com/file-uAiwzVEMp82aqzbfTt6szHgr?se=2023-11-06T07%3A37%3A20Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D3faffbff-71ef-4c03-bd7e-76c51e08f3e5.webp&sig=be5r0g%2BlYslkBQzc3ySufThAPcX%2BrCv5R71RLOg7J0A%3D",
 	"https://files.oaiusercontent.com/file-kaIpGecOHGfhrCurSnsgSF2t?se=2023-11-06T07%3A12%3A08Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D0faaf56d-d250-4a3d-9286-3192ea3edc4c.webp&sig=mJJS9KHVaU9pgnAU0p8o%2BV1NKlNXbAKrLUkyZBc794w%3D",
 	"https://files.oaiusercontent.com/file-IYrqdP5mkfjkP2Bklp68eNVx?se=2023-11-06T06%3A56%3A46Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D35a7febb-03d1-4b4b-b5fc-b1a5fc51b10f.webp&sig=6u8Cj2WmWeFxL95gDadhhxnAOrg4qxExZEIaC/VsDfk%3D",
@@ -44,7 +46,33 @@ preload(
 	"https://huntingtonstudygroup.org/wp-content/uploads/2015/08/hd-prevalence-map.png",
 	"https://www.mdpi.com/brainsci/brainsci-08-00177/article_deploy/html/images/brainsci-08-00177-g001.png",
 	"https://scx2.b-cdn.net/gfx/news/hires/2013/testingbrain.jpg",
-	"https://upload.medbullets.com/topic/113003/images/bbb%20-%20moises%20dominguez.jpg"
+	"https://upload.medbullets.com/topic/113003/images/bbb%20-%20moises%20dominguez.jpg",
+	"./src/img/magnify.png",
+	"./src/img/badbrain.jpeg",
+	"https://www.alzheimersblog.org/wp-content/uploads/2016/10/figure1.jpg",
+	"https://www.fairobserver.com/wp-content/uploads/2018/06/alt-right-incels-manosphere-extremism.png",
+	"https://media.wired.com/photos/5d3f7b1d6fd67f0009014cfa/1:1/w_1314,h_1314,c_limit/Science_PREP_645107548.jpg",
+	"https://www.healthyplace.com/sites/default/files/inline-images/Cholinesterase_Inhibitors.jpg",
+	"https://media.sciencephoto.com/image/c0511175/400wm",
+	"https://www.researchgate.net/publication/272080435/figure/fig1/AS:601754810982421@1520480935622/Fig-1-World-map-illustrating-the-global-distribution-of-deaths-caused-due-to.png",
+	"./src/img/palsy.jpeg",
+	"https://upload.wikimedia.org/wikipedia/commons/6/6a/Jean-Martin_Charcot.jpg",
+	"https://lermagazine.com/wp-content/uploads/2022/01/shutterstock_1049278997.jpg",
+	"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/3%2C4-Dihydroxy-L-phenylalanin_%28Levodopa%29.svg/640px-3%2C4-Dihydroxy-L-phenylalanin_%28Levodopa%29.svg.png",
+	"https://www.thelancet.com/cms/asset/e5de4e9b-4cd3-41a9-9793-c67d08163987/gr1.jpg",
+	"./src/img/brainGlass.webp",
+	"./src/img/brainStudy.png",
+	"./src/img/brainDraw.png",
+	"./src/img/brain0.png",
+	"./src/img/brain2.png",
+	"./src/img/brain3.png",
+	"./scr/img/flower.png",
+	"./src/img/brain4.webp",
+	"./src/img/brain5.webp",
+	"./src/img/brain6.png",
+	"./src/img/brain8.webp",
+	"./src/img/brain9.webp",
+	"./src/img/brain10.webp"
 
 
 )
@@ -322,9 +350,9 @@ function handleStage1() {
 	addText("title1", "History")
 	addText("txt1", "Alzheimer’s Disease (AD) was discovered by Dr. Alois Alzheimer on November 3, 1901, in an Asylum in Frankfurt. He performed an autopsy on Auguste Deter who'd had severe memory loss and behavioral change. She was the first diagnosed case of AD. This autopsy and research are the basis for all of our current knowledge on AD.", function() {
 		magnify("brain", "1-1mag");
+		
+		document.getElementById("1-1mag").setAttribute('onclick', "let intervalId = setInterval(function () {progress('txt1','1-1mag')}, 1000);document.getElementById('1-1mag').style.animation = 'linear 1s zoom';")
 		document.getElementById("1-1mag").setAttribute("hasProgressed", "false")
-		document.getElementById("1-1mag").setAttribute('onclick', "let intervalId = setInterval(function () {progress('txt1','1-1mag')}, 2000);document.getElementById('1-1mag').style.animation = 'linear 2s zoom';")
-
 
 	}, );
 }
@@ -353,12 +381,14 @@ function handleStage3() {
 
 	addText("txt1", "Even now we can only diagnose definite AD with a autopsy, doctors examine the neurofibrillary tangles (abnormal collections of tau proteins) and amyloid plaques (deposits of amyloid beta proteins) within the brain. These are currently believed to cause the main symptoms such as dementia and behavioral change.", function() {
 		let newIMG = document.getElementById("old"); // make sure to set "yourImageID" to the actual ID of your image
-		newIMG.setAttribute('hasProgressed', 'false')
+		
 		magnify(newIMG.id, "2-1mag");
-		document.getElementById("2-1mag").setAttribute("hasProgressed", "false");
-		document.getElementById("2-1mag").setAttribute('onclick', "setTimeout(function () {progress('txt1','2-1mag')}, 2000);document.getElementById('2-1mag').style.animation = 'linear 2s zoom';");
+		
+		
+		document.getElementById("2-1mag").setAttribute('onclick', "setTimeout(function () {progress('txt1','2-1mag')}, 1000);document.getElementById('2-1mag').style.animation = 'linear 1s zoom';");
 		document.getElementById("2-1mag").style.width = "500px";
 		document.getElementById("2-1mag").style.height = "500px";
+		document.getElementById("2-1mag").setAttribute("hasProgressed", "false");
 	});
 
 }
@@ -895,7 +925,7 @@ const IMG5 = document.getElementById("img5")
 
 function handleStage5_1() {
 	addText("title5", "Detection Models")
-	addText('txt5', 'Although there aren’t many good treatment options for AD and PD, neural networks are being developed that can assist in the detection and relevancy of symptoms. Using both supervised and unsupervised deep learning models can seriously improve our diagnoses and help differentiate conditions.(All images in this module will be generated with DALLE3 to demonstrate the current state of AI.......and because it\'s fun)', function() {
+	addText('txt5', 'Although there aren’t many good treatment options for AD and PD, neural networks are being developed that can assist in the detection and relevancy of symptoms. Using both supervised and unsupervised deep learning models can seriously improve our diagnoses and help differentiate conditions.(All images from now on have been generated by DALLE3 to demonstrate the current state of AI.......and because it\'s fun:)', function() {
 		IMG5.setAttribute("onclick", "progress('txt5','img5')")
 		IMG5.setAttribute("hasProgressed", "false")
 	})
@@ -905,26 +935,28 @@ function handleStage5_1() {
 function handleStage5_2() {
 	IMG5.style = "height: 100%"
 	IMG5.style.width = "500px"
-	run("Determining Importance", "The networks are given access to scans and brain images over time and with a large enough data set it can begin to detect which symptoms and biomarkers are important for pathology and treatment.", "https://files.oaiusercontent.com/file-A6h5y71u5UklGtPJeLlG9aTh?se=2023-11-06T03%3A24%3A27Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Da333d3ae-f20c-4cf9-95b1-3f130f73eabd.webp&sig=qkjRLMkgudmne9xKJ07O8iu3c%2BEmpsQCePpNn62yHT8%3D", 5)
+	run("Determining Importance", "The networks are given access to scans and brain images over time and with a large enough data set it can begin to detect which symptoms and biomarkers are important for pathology and treatment.", "./src/img/brainGlass.webp", 5)
+
 }
 
 function handleStage5_3() {
 	IMG5.style.width = "450px"
 	run("Change Over Time",
 		"The algorithms can put together a timeline to see how the conditions may worsen and in which areas. The main drawback to this technology is that there currently isn’t enough data and it will take time to train a model that we can trust for patients.",
-		"https://files.oaiusercontent.com/file-u8sAuHM4jlSnzIaXspdGv0db?se=2023-11-06T03%3A29%3A16Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D7d57dab2-5f85-4280-b844-4059adc2d013.webp&sig=oO9HpAZpyDq%2BUCi2Pw1iQ1KKkaeJ101C/BjKZP/z29w%3D",
+		"./src/img/brainStudy.png",
 		5)
 }
 
 function handleStage5_4() {
+	IMG5.style.width="800px"
 	run("Current Applications",
 		"This technology is already beginning to be used in the early diagnosis of Parkinson\\'s, they utilize a machine learning model to analyze patients drawing and writing samples to identify irregular motor function.",
-		"https://files.oaiusercontent.com/file-exwumbewO0kE6IniV7TL5rR0?se=2023-11-06T03%3A32%3A10Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D5f66444d-88a2-43c5-ba35-0b5fad792f2a.webp&sig=S4kdt%2B5ByvJSrN0%2BmOhqMdHhQgGbWV3JZVi273bDbs8%3D",
+		"./src/img/brainDraw.png",
 		5)
 }
 
 function handleStage5_5() {
-	run("Why it matters", "As previously mentioned, early detection is the key to getting proper treatment. If we can figure out what’s going on at the early stages or even predict it many lives will be saved. ", "https://files.oaiusercontent.com/file-GcCoYeEdusYuvWE146fPhuIX?se=2023-11-06T03%3A34%3A00Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dd21c728d-7d77-46de-8d27-ccf23129a4ad.webp&sig=Sz/oXDokY5oR7INVElBEuMQ2rNL%2BHYh4frBsend71Xw%3D", 5)
+	run("Why it matters", "As previously mentioned, early detection is the key to getting proper treatment. If we can figure out what’s going on at the early stages or even predict it many lives will be saved. ", "./src/img/brain0.png", 5)
 
 }
 
@@ -979,34 +1011,34 @@ function handleStage6_1() {
 function handleStage6_2() {
 	IMG6.style = "height: 100%"
 	IMG6.style.width = "800px"
-	run("Network Modeling", "The networks are given access to scans and brain images over time and with a large enough data set it can begin to detect which symptoms and biomarkers are important for pathology and treatment.", "https://files.oaiusercontent.com/file-Qv298w2KLmXJQU9xPjVQ2wBw?se=2023-11-06T06%3A12%3A16Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Df6d08a15-87a3-4648-b481-aefa77331db1.webp&sig=Yh9dybpD7OhxhO476lMlvPM7u/Qnq/We9B6g7EHclE0%3D", 6)
+	run("Network Modeling", "The networks are given access to scans and brain images over time and with a large enough data set it can begin to detect which symptoms and biomarkers are important for pathology and treatment.", "./src/img/brain2.png", 6)
 }
 
 function handleStage6_3() {
 	IMG6.style.width = "700px"
-	run("What they did", "They trained a machine learning algorithm on an image dataset. They then set certain connections between nodes to have 0 weight making them useless, to simulate damaged neurons. They tested on 25 unique simulations and increased the number damaged connections by 0.1% each time.", "https://files.oaiusercontent.com/file-c20GSRNDj9fLSh5jbtLEvaMO?se=2023-11-06T03%3A40%3A50Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D4f47aed7-3bb7-491c-b74f-72ddd5fb3221.webp&sig=ssGzZq/MMlYKYrOav2r7Nywj5XMob4F1PZYBGYT1AKM%3D", 6)
+	run("What they did", "They trained a machine learning algorithm on an image dataset. They then set certain connections between nodes to have 0 weight making them useless, to simulate damaged neurons. They tested on 25 unique simulations and increased the number damaged connections by 0.1% each time.", "./src/img/brain3.png", 6)
 }
 
 function handleStage6_4() {
 	IMG6.style.width = "500px"
-	run("Results", "From the 0-1.3% damage range the model had the same likelihood of misclassifying similar images ex. “Rose” for “tulip”", "./scr/img/flower.png", 6)
+	run("Results", "From the 0-1.3% damage range the model had the same likelihood of misclassifying similar images ex. “Rose” for “tulip”", "./src/img/flower.png", 6)
 
 }
 
 function handleStage6_5() {
 	IMG6.style.width = "500px"
-	run("Results", "When it reached 0.2% damage the performance was slightly different but not quite significant", "https://files.oaiusercontent.com/file-FvnNsx6Tij1vGIPrhRQKqVl1?se=2023-11-06T03%3A47%3A46Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D6d4ab110-04f1-4f34-942b-b2c489067fcf.webp&sig=QphWJ5s5HQFSVxbBAoVwgMJNFflGIrTQ9VMxMcXkYVo%3D", 6)
+	run("Results", "When it reached 0.2% damage the performance was slightly different but not quite significant", "./src/img/brain4.webp", 6)
 
 }
 
 function handleStage6_6() {
 	IMG6.style.width = "500px"
-	run("Results", "30% - It started to fail altogether, although the interior “thoughts” were similar it couldn’t get an accurate result beyond this point.", "https://files.oaiusercontent.com/file-6KIAZ3yoB44FVrkfOwFmcEqV?se=2023-11-06T03%3A50%3A09Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D18c2f4ff-e27a-4719-86f5-e18d32e65e03.webp&sig=P/v71lfeehC29xZiv/yqfjFBMwGc0JHvuQ7QQgvMcvU%3D", 6)
+	run("Results", "30% - It started to fail altogether, although the interior “thoughts” were similar it couldn’t get an accurate result beyond this point.", "./src/img/brain5.webp", 6)
 
 }
 
 function handleStage6_7() {
-	run("Why it matters", "In the future as this technology improves it’ll become more realistic to the function of a brain and can help us get better insights into treatment options and potential cures for these conditions", "https://files.oaiusercontent.com/file-nrwZOEHpdw81ixH4ECzXx2am?se=2023-11-06T05%3A53%3A52Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D2945ab55-13d0-4fce-8370-3150a57894f6.webp&sig=YukB222FZOpTcHA4AJpmAXJz7txWY8sSSGjV2xZuyiU%3D", 6)
+	run("Why it matters", "In the future as this technology improves it’ll become more realistic to the function of a brain and can help us get better insights into treatment options and potential cures for these conditions.", "./src/img/brain6.png", 6)
 
 }
 
@@ -1053,7 +1085,7 @@ const IMG7 = document.getElementById("img7")
 
 function handleStage7_1() {
 	addText("title7", "Digital Biomarkers")
-	addText('txt7', 'Digital biomarkers are measurements taken from interactions in your daily life. They could be anything you do regularly from how you write a text to what time you eat lunch', function() {
+	addText('txt7', 'Digital biomarkers are measurements taken from interactions in your daily life. They could be anything you do regularly from how you write a text to what time you eat lunch.', function() {
 		IMG7.setAttribute("onclick", "progress('txt7','img7')")
 		IMG7.setAttribute("hasProgressed", "false")
 	})
@@ -1064,24 +1096,24 @@ function handleStage7_2() {
 
 	IMG7.style.height = "100%";
 	IMG7.style.width = "500px";
-	run("Benefits", "Through specific datasets and current knowledge digital biomarkers could entirely change how we diagnose people. For example if your keyboard is connected to your health data it could inform your doctor that you\\'re typing slower and you could test you motor control. This is really beneficial because once people are diagnosed, trends can be traced and the network will improve.", "https://files.oaiusercontent.com/file-WJFiB16C3U7qgiD2o53kX723?se=2023-11-06T06%3A30%3A26Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D99d9a92e-5408-44aa-8359-ec0ebee8aad6.webp&sig=AgKezzpHCEN8JC9s8MPCYBhitWdu1DbOPqlfQgwe%2B4g%3D", 7)
+	run("Benefits", "With specific datasets and current knowledge, digital biomarkers could entirely change how we diagnose people. For example if your keyboard is connected to your health data it could inform your doctor that you\\'re typing slower and you could test you motor control. This is really beneficial because once people are diagnosed, trends can be traced and the network will improve.", "./src/img/brain8.webp", 7)
 }
 
 function handleStage7_3() {
 
 	IMG6.style.width = "800px"
-	run("Integration", "Another major benefit is that they don\\'t require a lot of new technology. Think about how much helpful health data could be collected from simply your smartphone.", "https://files.oaiusercontent.com/file-IW9Pxe635Zao5dWJM7M9oxNc?se=2023-11-06T06%3A47%3A40Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D250c65f3-6d25-405d-9230-a24fd7f11437.webp&sig=BPF8UZq79UbpnPmla74wh9G7X2GQ8pe0GdwkvYrv6BQ%3D", 7)
+	run("Integration", "Another major benefit is that they don\\'t require a lot of new technology. Think about how much helpful health data could be collected from simply your smartphone.", "./src/img/brain9.webp", 7)
 }
 
 function handleStage7_4() {
 	IMG7.style.width = "500px"
-	run("Current Applications", "Smartphones are beginning to be used for ocular monitoring which tracks eye movement and is a valuable metric in detecting multiple sclerosis, a neurodegenerative disease I didn\\'t cover.", "https://files.oaiusercontent.com/file-IYrqdP5mkfjkP2Bklp68eNVx?se=2023-11-06T06%3A56%3A46Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D35a7febb-03d1-4b4b-b5fc-b1a5fc51b10f.webp&sig=6u8Cj2WmWeFxL95gDadhhxnAOrg4qxExZEIaC/VsDfk%3D", 7)
+	run("Current Applications", "Smartphones are beginning to be used for ocular monitoring which tracks eye movement and is a valuable metric in detecting multiple sclerosis, a neurodegenerative disease I didn\\'t cover.", "./src/img/brainX.png", 7)
 
 }
 
 function handleStage7_5() {
 	IMG6.style.width = "500px"
-	run("Significance", "As I previously mentioned, early detection is the key to proper treatment. Through integration of these biomarkers throughout people\\'s daily lives each person could have a unique profile with certain things they may be at risk for.", "https://files.oaiusercontent.com/file-kaIpGecOHGfhrCurSnsgSF2t?se=2023-11-06T07%3A12%3A08Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D0faaf56d-d250-4a3d-9286-3192ea3edc4c.webp&sig=mJJS9KHVaU9pgnAU0p8o%2BV1NKlNXbAKrLUkyZBc794w%3D", 7);
+	run("Significance", "As I previously mentioned, early detection is the key to proper treatment. Through integration of these biomarkers throughout people\\'s daily lives each person could have a unique profile with certain things they may be at risk for.", "./src/img/brain10.webp", 7);
 
 }
 
