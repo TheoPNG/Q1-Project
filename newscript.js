@@ -219,7 +219,7 @@ function getRandomInt(min, max) {
 }
 
 function createRandomShape(index) {
-	const shapes = ["square", "circle"];
+	const shapes = [ "square","circle"];
 
 	const selectedShape = shapes[getRandomInt(0, shapes.length - 1)];
 
