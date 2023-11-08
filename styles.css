@@ -7,12 +7,8 @@
   --text-color: #ffffff;
   --button-size: 400px;
 }
-
-img{
-  cursor: pointer;
-}
-p{
-  cursor: default;
+*{
+  cursor:none;
 }
 #sp, #spp{
   background-color: black;
@@ -29,7 +25,7 @@ p{
   background-color: white;
 }
 h2{
-  cursor: default;
+
   font-size: x-large;
 }
 p{

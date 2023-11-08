@@ -1127,3 +1127,24 @@ function intro() {
 	addText("title0", "Introduction", function() {}, false)
 	addText('txt0', "In this presentation we'll be covering neurodegenerative disease and how computational neuroscience can assist in research and treatment. Navigation is simple, just scroll down like you would on any other site. Each module is labeled and you just need to click on the images to progress through them. Also my works cited is the shapes in the background.(Scroll to the first module)", function() {}, false)
 }
+// Add this to your newscript.js
+
+// Function to update cursor position
+function updateCursor(event) {
+	// Set the position of the cursor image to the mouse coordinates
+	cursorImage.style.left = `${event.pageX}px`;
+	cursorImage.style.top = `${event.pageY}px`;
+  }
+  
+  // Create an image element for the custom cursor
+  const cursorImage = document.createElement('img');
+  cursorImage.src = './src/img/brainCurse.png'; // Set the source to your cursor image
+  cursorImage.id = 'custom-cursor';
+  cursorImage.style.width = "15px"
+  cursorImage.style.position = 'absolute';
+  cursorImage.style.pointerEvents = 'none'; // Ignore the cursor image for mouse events
+  document.body.appendChild(cursorImage);
+  
+  // Add mousemove event listener to the document
+  document.addEventListener('mousemove', updateCursor);
+  
