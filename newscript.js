@@ -1123,3 +1123,7 @@ function conclude() {
 	addText("title8", "Conclusion", function() {}, false)
 	addText('txt8', "Technology will be the breakthrough point that allows us to cure these incurable diseases. It opens doors we didn\'t know existed. If these networks are supplied enough data and trained properly many people lives will be improved. I just mentioned the topic of neuroscience here but these tools will change how we approach disease as a whole.", function() {}, false)
 }
+function intro() {
+	addText("title0", "Introduction", function() {}, false)
+	addText('txt0', "In this presentation we'll be covering neurodegenerative disease and how computational neuroscience can assist in research and treatment. Navigation is simple, just scroll down like you would on any other site. Each module is labeled and you just need to click on the images to progress through them. Also my works cited is the shapes in the background.(Scroll to the first module)", function() {}, false)
+}

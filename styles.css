@@ -13,18 +13,18 @@ img{
 p{
   cursor: default;
 }
-#sp{
+#sp, #spp{
   background-color: black;
   color: white;
   border: white;
 }
-#sp p{
+#sp p, #spp p{
   color: black !important;
 }
-#title8{
+#title8, #title0{
   color: black!important;
 }
-#card8{
+#card8, #card0{
   background-color: white;
 }
 h2{
@@ -238,6 +238,9 @@ img .turn-black {
       transform: scale(20);
  }
 }
-#txt8{
+#txt{
   color: black!important;
+}
+#txt0{
+  color: black;
 }
