@@ -7,6 +7,7 @@
   --text-color: #ffffff;
   --button-size: 400px;
 }
+
 img{
   cursor: pointer;
 }
@@ -241,6 +242,6 @@ img .turn-black {
 #txt{
   color: black!important;
 }
-#txt0{
+#txt0, #txt8{
   color: black;
 }
