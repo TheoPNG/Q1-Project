@@ -348,7 +348,7 @@ function handleStages(mutations) {
 
 function handleStage1() {
 	addText("title1", "History")
-	addText("txt1", "Alzheimer’s Disease (AD) was discovered by Dr. Alois Alzheimer on November 3, 1901, in an Asylum in Frankfurt. He performed an autopsy on Auguste Deter who'd had severe memory loss and behavioral change. She was the first diagnosed case of AD. This autopsy and research are the basis for all of our current knowledge on AD.", function() {
+	addText("txt1", "Alzheimer’s Disease (AD) was discovered by Dr. Alois Alzheimer on November 3, 1901, in an asylum in Frankfurt. He performed an autopsy on Auguste Deter, who had severe memory loss and behavioral changes. She was the first diagnosed case of AD. This autopsy and research are the basis for all our current knowledge on AD.", function() {
 		magnify("brain", "1-1mag");
 		
 		document.getElementById("1-1mag").setAttribute('onclick', "let intervalId = setInterval(function () {progress('txt1','1-1mag')}, 1000);document.getElementById('1-1mag').style.animation = 'linear 1s zoom';")
@@ -379,7 +379,7 @@ function handleStage3() {
 
 
 
-	addText("txt1", "Even now we can only diagnose definite AD with a autopsy, doctors examine the neurofibrillary tangles (abnormal collections of tau proteins) and amyloid plaques (deposits of amyloid beta proteins) within the brain. These are currently believed to cause the main symptoms such as dementia and behavioral change.", function() {
+	addText("txt1", "Even now, we can only diagnose definite AD with an autopsy. Doctors examine the neurofibrillary tangles (abnormal collections of tau proteins) and amyloid plaques (deposits of amyloid beta proteins) within the brain. These are currently believed to cause the main symptoms, such as dementia and behavioral changes.", function() {
 		let newIMG = document.getElementById("old"); // make sure to set "yourImageID" to the actual ID of your image
 		
 		magnify(newIMG.id, "2-1mag");
@@ -606,7 +606,7 @@ function handleStage2_2() {
 	IMG2.style.height = "60vh"
 	IMG2.style.width = "600px"
 	IMG2.setAttribute("hasProgressed", "false")
-	IMG2.setAttribute('onclick', "addText('txt2', 'PD can be traced to an entire century before AD was discovered. It was first medically described by James Parkinson in 1817 but cases of it have been found in texts up to 3,000 years ago in India. Dr. Parkinson wrote “An Essay on the Shaking Palsy” in which he described 6 cases of PD from his own practice.', function(){ IMG2.setAttribute('onclick', 'progress(\\'txt2\\',\\'img#2\\')'); })");
+	IMG2.setAttribute('onclick', "addText('txt2', 'Parkinson’s Disease (PD) can be traced to an entire century before AD was discovered. It was first medically described by James Parkinson in 1817, although cases have been documented in texts dating back up to 3,000 years ago in India. Dr. Parkinson wrote “An Essay on the Shaking Palsy,” in which he described six cases of PD from his own practice.', function() { IMG2.setAttribute('onclick', 'progress(\'txt2\',\'img#2\')'); });");
 
 
 
@@ -674,7 +674,7 @@ function handleStage2_7() {
 	IMG2.style.height = "100%"
 	IMG2.style.width = "850px"
 	IMG2.setAttribute("hasProgressed", "false");
-	addText("title2", "Statisics")
+	addText("title2", "Statistics")
 	IMG2.setAttribute('onclick', "addText('txt2', 'PD affects over 10 million people across the globe. Men are 1.5x more likely to get it.', function(){ IMG2.setAttribute('onclick', 'progress(\\'txt2\\',\\'img#2\\')'); })");
 }
 
@@ -942,7 +942,7 @@ function handleStage5_2() {
 function handleStage5_3() {
 	IMG5.style.width = "450px"
 	run("Change Over Time",
-		"The algorithms can put together a timeline to see how the conditions may worsen and in which areas. The main drawback to this technology is that there currently isn’t enough data and it will take time to train a model that we can trust for patients.",
+		"The algorithms can put together a timeline to see how the conditions may worsen and in which areas. The main drawback of this technology is the current lack of sufficient data, which means it will take time to train a model that is reliable for patients.",
 		"./src/img/brainStudy.png",
 		5)
 }
