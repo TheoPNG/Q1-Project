@@ -603,11 +603,11 @@ function handleStage2_2() {
 	addText("title2", "History")
 	document.getElementById("palsy").remove();
 	IMG2.src = "./src/img/palsy.jpeg";
-	IMG2.style.height = "60vh"
-	IMG2.style.width = "600px"
-	IMG2.setAttribute("hasProgressed", "false")
-	IMG2.setAttribute('onclick', "addText('txt2', 'Parkinson’s Disease (PD) can be traced to an entire century before AD was discovered. It was first medically described by James Parkinson in 1817, although cases have been documented in texts dating back up to 3,000 years ago in India. Dr. Parkinson wrote “An Essay on the Shaking Palsy,” in which he described six cases of PD from his own practice.', function() { IMG2.setAttribute('onclick', 'progress(\'txt2\',\'img#2\')'); });");
-
+	// IMG2.style.height = "60vh"
+	// IMG2.style.width = "600px"
+	
+	IMG2.setAttribute('onclick', "addText('txt2', 'Parkinson’s Disease (PD) can be traced to an entire century before AD was discovered. It was first medically described by James Parkinson in 1817, although cases have been documented in texts dating back up to 3,000 years ago in India. Dr. Parkinson wrote “An Essay on the Shaking Palsy,” in which he described six cases of PD from his own practice.', function() { IMG2.setAttribute('onclick', 'progress(\\'txt2\\',\\'img#2\\');');});");
+IMG2.setAttribute('hasProgressed', 'false'); 
 
 
 
